@@ -6,8 +6,9 @@ Creates the Azure Site Recovery Vault in a given region
 Reference the module to a specific version (recommended):
 ```hcl
 module "site_recovery" {
-    source                  = "git://github.com/aztfmod/site_recovery.git?ref=v0.1"
-  
+    source  = "aztfmod/caf-site-recovery/azurerm"
+    version = "0.1.0"
+    
     resource_group_name               = var.rg
     asr_vault_name                    = var.name
     location                          = var.location
