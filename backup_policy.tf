@@ -4,7 +4,7 @@ resource "azurerm_recovery_services_protection_policy_vm" "backup" {
   depends_on          = [azurerm_recovery_services_vault.asr_rg_vault]
   name                = "TFMamagedDefaultPolicyBackupRetention"
   resource_group_name = var.resource_group_name
-  recovery_vault_name = "${azurerm_recovery_services_vault.asr_rg_vault.name}"
+  recovery_vault_name = azurerm_recovery_services_vault.asr_rg_vault.name
 
   timezone = "Singapore Standard Time"
   #Use full TZ name as per: https://docs.microsoft.com/en-us/previous-versions/windows/embedded/gg154758(v=winembedded.80)
