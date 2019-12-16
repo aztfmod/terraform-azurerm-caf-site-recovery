@@ -1,4 +1,4 @@
-variable "resource_group_name" {
+variable "rg" {
   description = "(Required) Resource group name"
 }
 
@@ -6,7 +6,7 @@ variable "location" {
   description = "(Required) Location of the site recovery vault."
 }
 
-variable "asr_vault_name" {
+variable "name" {
   description = "(Required) name of the ASR vault"
 }
 
@@ -25,3 +25,8 @@ variable "diagnostics_map" {
 variable "diagnostics_settings" {
  description = "(Required) Map with the diagnostics settings for ASR deployment"
 }
+
+variable "convention" {
+  description = "(Required) Naming convention method to use"  
+}
+

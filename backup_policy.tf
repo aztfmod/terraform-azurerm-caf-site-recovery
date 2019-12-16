@@ -3,7 +3,7 @@
 resource "azurerm_recovery_services_protection_policy_vm" "backup" {
   depends_on          = [azurerm_recovery_services_vault.asr_rg_vault]
   name                = "TFMamagedDefaultPolicyBackupRetention"
-  resource_group_name = var.resource_group_name
+  resource_group_name = var.rg
   recovery_vault_name = azurerm_recovery_services_vault.asr_rg_vault.name
 
   timezone = "Singapore Standard Time"
