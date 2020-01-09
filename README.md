@@ -7,25 +7,10 @@ Reference the module to a specific version (recommended):
 ```hcl
 module "site_recovery" {
     source  = "aztfmod/caf-site-recovery/azurerm"
-    version = "0.1.0"
+    version = "0.x.y"
     
     resource_group_name               = var.rg
     asr_vault_name                    = var.name
-    location                          = var.location
-    tags                              = var.tags
-    opslogs_retention_period          = var.retention
-    diagnostics_map                   = var.diagsmap
-    la_workspace_id                   = var.laworkspace.id
-}
-```
-
-Or get the latest version
-```hcl
-module "site_recovery" {
-    source                  = "git://github.com/aztfmod/site_recovery.git?ref=latest"
-  
-    resource_group_name               = var.rg
-    auto_name                         = var.name
     location                          = var.location
     tags                              = var.tags
     opslogs_retention_period          = var.retention
@@ -149,28 +134,9 @@ Example
 ```
 
 # Output
-## object
-Returns the resource object of the created ASR vault.
-```hcl
-output "object" {
-  value = azurerm_recovery_services_vault.asr_rg_vault
-}
-```
 
-## name
-Returns the resource name of the created ASR vault.
-```hcl
-output "name" {
-  value = azurerm_recovery_services_vault.asr_rg_vault.name
-}
-
-```
-
-## id
-Returns the resource ID of the created ASR vault.
-```hcl
-output "id" {
-  value = azurerm_recovery_services_vault.asr_rg_vault.id
-}
-
-```
+| Name | Type | Description | 
+| -- | -- | -- | 
+| object | object | Returns the full object of the created ASR. |
+| name | string | Returns the name of the created ASR. |
+| id | string | Returns the ID of the created ASR. | 

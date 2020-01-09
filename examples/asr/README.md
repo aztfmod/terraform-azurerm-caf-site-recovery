@@ -1,6 +1,6 @@
-# security_center
+# Azure site recovery
 
-Creates an ASC test environment.
+Creates an ASR test environment.
 
 ## Usage
 To run this example, simply execute: 
