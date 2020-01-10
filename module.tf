@@ -1,6 +1,7 @@
 module "caf_name_gen" {
-  source = "github.com/aztfmod/terraform-azurerm-caf-naming.git?ref=proto"
-  
+  source  = "aztfmod/caf-naming/azurerm"
+  version = "~> 0.1.0"
+
   name    = var.name
   type    = "gen"
   convention  = var.convention
@@ -13,3 +14,4 @@ resource "azurerm_recovery_services_vault" "asr_rg_vault" {
   sku                 = "Standard"
   tags                = local.tags
 }
+
