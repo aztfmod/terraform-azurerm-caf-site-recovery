@@ -1,5 +1,5 @@
 locals {
-    convention = "cafclassic"
+    convention = "cafrandom"
     name = "caftest-asr"
     location = "southeastasia"
     prefix = ""
