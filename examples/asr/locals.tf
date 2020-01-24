@@ -1,11 +1,11 @@
 locals {
-    convention = "random"
-    name = "caftest"
+    convention = "cafclassic"
+    name = "caftest-asr"
     location = "southeastasia"
     prefix = ""
     resource_groups = {
         test = { 
-            name     = "test-caf"
+            name     = "test-caf-asr"
             location = "southeastasia" 
         },
     }
@@ -19,8 +19,8 @@ locals {
             "product"   = "OMSGallery/NetworkMonitoring"
         },
     }
-
-    asr_vault_name = "asr"
+    enable_event_hub = false
+    asr_vault_name = "arnaudasr"
 
     asr_diags = {
         log_analytics_destination_type = "Dedicated"

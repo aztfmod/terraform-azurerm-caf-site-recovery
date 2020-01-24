@@ -1,6 +1,3 @@
-data "azurerm_client_config" "current" {
-}
-
 module "rg_test" {
   source  = "aztfmod/caf-resource-group/azurerm"
   version = "0.1.1"
@@ -12,9 +9,9 @@ module "rg_test" {
 
 module "la_test" {
   source  = "aztfmod/caf-log-analytics/azurerm"
-  version = "0.1.0"
+  version = "1.0.0"
   
-    # convention          = local.convention
+    convention          = local.convention
     location            = local.location
     name                = local.name
     solution_plan_map   = local.solution_plan_map 
@@ -25,12 +22,15 @@ module "la_test" {
 
 module "diags_asr_test" {
   source  = "aztfmod/caf-diagnostics-logging/azurerm"
-  version = "0.1.2"
+  version = "1.0.0"
 
+  name                  = local.name
+  convention            = local.convention
   resource_group_name   = module.rg_test.names.test
   prefix                = local.prefix
   location              = local.location
   tags                  = local.tags
+  enable_event_hub      = local.enable_event_hub
 }
 
 module "asr_test" {
