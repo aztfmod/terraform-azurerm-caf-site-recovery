@@ -1,4 +1,4 @@
-variable "rg" {
+variable "resource_group_name" {
   description = "(Required) Resource group name"
 }
 
@@ -28,5 +28,29 @@ variable "diagnostics_settings" {
 
 variable "convention" {
   description = "(Required) Naming convention method to use"  
+}
+
+variable "prefix" {
+  description = "(Optional) You can use a prefix to the name of the resource"
+  type        = string
+  default = ""
+}
+
+variable "postfix" {
+  description = "(Optional) You can use a postfix to the name of the resource"
+  type        = string
+  default = ""
+}
+
+variable "max_length" {
+  description = "(Optional) You can speficy a maximum length to the name of the resource"
+  type        = string
+  default = ""
+}
+
+variable "soft_delete_enabled" {
+  description = "(Optional) Enable soft delete enable for this Vault"
+  type        = bool
+  default = true
 }
 
