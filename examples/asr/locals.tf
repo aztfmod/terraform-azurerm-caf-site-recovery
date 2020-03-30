@@ -20,7 +20,7 @@ locals {
         },
     }
     enable_event_hub = false
-    asr_vault_name = "arnaudasr"
+    asr_vault_name = "asee"
 
     asr_diags = {
         log_analytics_destination_type = "Dedicated"

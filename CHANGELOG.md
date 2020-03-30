@@ -1,3 +1,9 @@
+## v2.0 (March 2020)
+
+FEATURES: 
+* **new feature:**  Add support for azurerm 2.x and azurecaf providers ([#3](https://github.com/aztfmod/terraform-azurerm-caf-site-recovery/issues/3))
+
+
 ## v1.0 (January 2020)
 
 FEATURES: 
