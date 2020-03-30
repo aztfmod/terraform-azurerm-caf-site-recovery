@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "rg_test" {
 
 module "la_test" {
   source  = "aztfmod/caf-log-analytics/azurerm"
-  version = "2.0.0"
+  version = "2.0.1"
   
     convention          = local.convention
     location            = local.location
@@ -23,7 +23,7 @@ module "la_test" {
 
 module "diags_asr_test" {
   source  = "aztfmod/caf-diagnostics-logging/azurerm"
-  version = "2.0.0"
+  version = "2.0.1"
 
   name                  = local.name
   convention            = local.convention
