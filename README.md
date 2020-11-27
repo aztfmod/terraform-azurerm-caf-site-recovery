@@ -1,3 +1,22 @@
+# **READ ME**
+
+Thanks for your interest in Cloud Adoption Framework for Azure landing zones on Terraform.
+This module is now deprecated and no longer maintained. 
+
+As part of Cloud Adoption Framework landing zones for Terraform, we have migrated to a single module model, which you can find here: https://github.com/aztfmod/terraform-azurerm-caf and on the Terraform registry: https://registry.terraform.io/modules/aztfmod/caf/azurerm 
+
+In Terraform 0.13 you can now call directly submodules easily with the following syntax:
+```hcl
+module "caf_recovery_vault" {
+  source  = "aztfmod/caf/azurerm//modules/recovery_vault"
+  version = "0.4.18"
+  # insert the 6 required variables here
+}
+```
+
+
+
+
 [![Gitter](https://badges.gitter.im/aztfmod/community.svg)](https://gitter.im/aztfmod/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 # Deploys an Azure Site Recovery Vault
